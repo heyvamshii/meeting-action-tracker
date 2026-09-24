@@ -1,0 +1,40 @@
+{
+  "meeting_id": "REPLACE-ME",
+  "meeting_date": "2026-09-03",
+  "title": "",
+  "participants": [],
+  "summary": "",
+  "decisions": [
+    {
+      "decision": "",
+      "made_by": "",
+      "agreed_by": [],
+      "timestamp": "00:00:00"
+    }
+  ],
+  "action_items": [
+    {
+      "task": "",
+      "owner": "UNASSIGNED",
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open",
+      "timestamp": "00:00:00"
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "",
+      "raised_by": "",
+      "status": "open",
+      "timestamp": "00:00:00"
+    }
+  ],
+  "risks": [
+    {
+      "risk": "",
+      "severity": "low",
+      "timestamp": "00:00:00"
+    }
+  ]
+}

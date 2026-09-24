@@ -1,0 +1,56 @@
+[00:00:03] Aparna (Product Lead): Launch sync for the analytics dashboard. Target date is October the sixth. Four weeks. Let's find out whether that date is still real.
+[00:00:16] Vivek (Eng): Engineering is on track for the core dashboard. Charts, filters, saved views. That's done by the twenty-fifth.
+[00:00:26] Aparna (Product Lead): And the scheduled email reports?
+[00:00:30] Vivek (Eng): That's the risk. It depends on the notification service, and the notification service team is fully committed to SSO this sprint.
+[00:00:41] Aparna (Product Lead): So it might not land.
+[00:00:45] Vivek (Eng): It might not. I'd put it at fifty-fifty.
+[00:00:50] Aparna (Product Lead): Is the launch viable without scheduled reports?
+[00:00:55] Meghna (Marketing): The whole campaign is built around it. Our headline is literally "your numbers, in your inbox, every Monday."
+[00:01:05] Aparna (Product Lead): Then we need to know before you finalise the campaign.
+[00:01:11] Meghna (Marketing): I need to lock creative by the sixteenth. Agency needs two weeks.
+[00:01:18] Aparna (Product Lead): Vivek, can you give a go or no-go on scheduled reports by the fifteenth?
+[00:01:25] Vivek (Eng): I can. I'll know after the notification team's planning on Thursday.
+[00:01:32] Aparna (Product Lead): Then that's the gate. Vivek gives Meghna a go or no-go on scheduled reports by the fifteenth.
+[00:01:41] Meghna (Marketing): And if it's no-go?
+[00:01:44] Aparna (Product Lead): Then we reposition around self-serve exploration and hold email reports for a point release. Not ideal but survivable.
+[00:01:55] Meghna (Marketing): I'd want a backup creative concept ready either way.
+[00:02:01] Aparna (Product Lead): Agreed. Meghna, brief the agency on a fallback concept alongside the main one.
+[00:02:09] Meghna (Marketing): I'll brief them Monday.
+[00:02:12] Aparna (Product Lead): Documentation. Where are we?
+[00:02:16] Jasleen (Docs): Nowhere, because the UI keeps changing. I've rewritten the filters section three times.
+[00:02:24] Vivek (Eng): The UI is frozen from Friday. No more changes.
+[00:02:30] Jasleen (Docs): Then I can be done a week after that. So the twenty-fifth.
+[00:02:36] Aparna (Product Lead): That's tight against a sixth of October launch, but workable. Jasleen, docs complete by the twenty-fifth.
+[00:02:45] Jasleen (Docs): I'll need screenshots from a stable build.
+[00:02:50] Vivek (Eng): I'll get you a stable staging build by Monday.
+[00:02:55] Aparna (Product Lead): Pricing. Have we decided?
+[00:03:00] Meghna (Marketing): I thought this was settled. It's included in the Pro tier.
+[00:03:06] Aparna (Product Lead): Finance came back last week and asked whether it should be an add-on.
+[00:03:13] Meghna (Marketing): That completely changes the messaging.
+[00:03:17] Aparna (Product Lead): I know. Which is why I'm raising it now rather than in three weeks.
+[00:03:24] Vivek (Eng): Does it change anything for engineering?
+[00:03:28] Aparna (Product Lead): Entitlement checks, so yes, a bit.
+[00:03:33] Vivek (Eng): Then I need to know soon too.
+[00:03:37] Aparna (Product Lead): I'm meeting finance on Thursday. I'll have an answer by Friday.
+[00:03:44] Meghna (Marketing): Please. Everything downstream depends on it.
+[00:03:49] Aparna (Product Lead): Understood. Support readiness, anyone?
+[00:03:55] Jasleen (Docs): Support hasn't been briefed at all.
+[00:04:00] Aparna (Product Lead): That's an oversight. Who owns support enablement?
+[00:04:06] Meghna (Marketing): Historically it's been me, but I'm stretched.
+[00:04:11] Aparna (Product Lead): Jasleen, can you run a support enablement session in the week before launch?
+[00:04:18] Jasleen (Docs): I can, if the docs are done, which they will be.
+[00:04:24] Aparna (Product Lead): Book it for the thirtieth.
+[00:04:28] Jasleen (Docs): I'll put it in the calendar today.
+[00:04:32] Aparna (Product Lead): Beta customers. How many are on it?
+[00:04:37] Vivek (Eng): Nine accounts. Feedback has been positive except for load times on large data sets.
+[00:04:46] Aparna (Product Lead): How bad?
+[00:04:49] Vivek (Eng): Eleven seconds for a year of data on the biggest account.
+[00:04:55] Aparna (Product Lead): That's bad enough to hurt us at launch.
+[00:05:00] Vivek (Eng): It's a query problem, not a front end problem. Probably fixable but I haven't scoped it.
+[00:05:08] Aparna (Product Lead): Scope it this week please. Vivek, come back with an estimate for the dashboard load time issue.
+[00:05:17] Vivek (Eng): I'll have a number by Wednesday.
+[00:05:21] Aparna (Product Lead): Right. So the launch date holds, conditional on three things: scheduled reports go or no-go by the fifteenth, pricing decided by Friday, and load times scoped by Wednesday.
+[00:05:37] Meghna (Marketing): And creative locked on the sixteenth.
+[00:05:41] Aparna (Product Lead): Yes. If any of those slip, we talk about moving the date rather than shipping something half-finished.
+[00:05:50] Jasleen (Docs): Good.
+[00:05:53] Aparna (Product Lead): Thanks everyone.

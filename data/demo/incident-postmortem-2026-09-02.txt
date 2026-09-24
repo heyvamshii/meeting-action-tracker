@@ -1,0 +1,53 @@
+[00:00:02] Ganesh (SRE Lead): This is the postmortem for incident 412. Checkout was down for fifty-one minutes on Sunday night. Blameless, as always. Let's walk the timeline first.
+[00:00:16] Lavanya (SRE): Alert fired at 21:14 on payment API error rate. First page went to me. I acknowledged at 21:17.
+[00:00:27] Ganesh (SRE Lead): Three minutes is good.
+[00:00:30] Lavanya (SRE): I spent the next twenty minutes looking at the payment gateway because that's what the alert said. The gateway was fine.
+[00:00:41] Bhaskar (Dev): It was the connection pool. We'd exhausted it.
+[00:00:46] Lavanya (SRE): Right, but nothing told me that. The alert pointed at the symptom.
+[00:00:53] Ganesh (SRE Lead): So the first real question is why we had no connection pool metric.
+[00:01:00] Bhaskar (Dev): We do have one. It's just not alerted on and it's on a dashboard nobody opens.
+[00:01:08] Ganesh (SRE Lead): That's the same as not having it.
+[00:01:12] Bhaskar (Dev): Agreed.
+[00:01:15] Ganesh (SRE Lead): Bhaskar, add an alert on connection pool saturation above eighty percent.
+[00:01:23] Bhaskar (Dev): I'll do it this week. It's a small change.
+[00:01:28] Ganesh (SRE Lead): What caused the exhaustion?
+[00:01:32] Bhaskar (Dev): The reporting export change we shipped Friday. Each export holds a connection for the whole job. Someone ran eleven exports at once on Sunday evening.
+[00:01:46] Priyanka (PM): Eleven at once? Who?
+[00:01:50] Bhaskar (Dev): Trendline. They were doing a data migration and pulled everything.
+[00:01:57] Priyanka (PM): So a customer doing something reasonable took down checkout.
+[00:02:03] Ganesh (SRE Lead): That's the finding, yes. One workload starved another.
+[00:02:09] Lavanya (SRE): There's no isolation between them. Same pool, same database.
+[00:02:16] Ganesh (SRE Lead): Which is the real fix, and it's not small.
+[00:02:21] Bhaskar (Dev): A separate pool for background jobs would do it. Maybe three days.
+[00:02:28] Lavanya (SRE): A read replica for reporting would do it better, but that's a quarter of work.
+[00:02:36] Ganesh (SRE Lead): Let's do the separate pool now and put the read replica in the roadmap discussion. Bhaskar, that's yours.
+[00:02:46] Bhaskar (Dev): I'll have the separate connection pool for background jobs by the end of next week.
+[00:02:54] Priyanka (PM): Do we need to tell Trendline?
+[00:02:58] Ganesh (SRE Lead): We need to tell everyone who was affected. How many customers saw errors?
+[00:03:06] Lavanya (SRE): About four hundred accounts had at least one failed checkout.
+[00:03:12] Priyanka (PM): I'll draft the customer communication and get it out by Thursday.
+[00:03:19] Ganesh (SRE Lead): Send it to me first. I want to read it before it goes.
+[00:03:25] Priyanka (PM): Of course.
+[00:03:28] Ganesh (SRE Lead): What about recovery? Fifty-one minutes is long.
+[00:03:34] Lavanya (SRE): Twenty minutes of that was me looking in the wrong place. Then ten minutes to find someone who understood the pool config. Then the restart took eight minutes.
+[00:03:48] Ganesh (SRE Lead): Why eight minutes to restart?
+[00:03:52] Bhaskar (Dev): Rolling restart with a two minute health check per instance. Four instances.
+[00:03:59] Ganesh (SRE Lead): That's by design, but nobody knew it would take that long.
+[00:04:06] Lavanya (SRE): There's no runbook for this service.
+[00:04:10] Ganesh (SRE Lead): Then that's an action. Lavanya, write a runbook for the payment service covering pool exhaustion and restart timings.
+[00:04:20] Lavanya (SRE): I'll write it by the end of the sprint.
+[00:04:25] Priyanka (PM): Should we be worried this happens again before the pool fix lands?
+[00:04:32] Bhaskar (Dev): Honestly, yes. Nothing stops it today.
+[00:04:37] Ganesh (SRE Lead): Then we need something temporary. Can we rate limit exports?
+[00:04:44] Bhaskar (Dev): We can cap concurrent exports per account at two. That's an hour of work.
+[00:04:51] Ganesh (SRE Lead): Do that today. Bhaskar, cap concurrent exports per account at two, today.
+[00:04:59] Bhaskar (Dev): On it after this call.
+[00:05:03] Ganesh (SRE Lead): Last thing. Is there anywhere else with this shape of problem? Shared pool, one workload able to starve another.
+[00:05:14] Lavanya (SRE): The search indexer uses the same pool.
+[00:05:19] Bhaskar (Dev): So does the nightly billing reconciliation.
+[00:05:24] Ganesh (SRE Lead): Then we have three, not one. Lavanya, list every background job sharing the primary connection pool. Don't fix them, just enumerate.
+[00:05:36] Lavanya (SRE): I'll have the list by Monday.
+[00:05:40] Priyanka (PM): Is the read replica going into the quarterly plan?
+[00:05:46] Ganesh (SRE Lead): I'm not deciding that here. It needs a cost estimate first and that's a conversation with Anand.
+[00:05:55] Priyanka (PM): Understood, I'll leave it open.
+[00:05:59] Ganesh (SRE Lead): Good postmortem. Nobody broke anything they shouldn't have. The system let one customer hurt another and that's on the architecture.

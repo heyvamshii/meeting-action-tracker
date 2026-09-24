@@ -1,0 +1,53 @@
+[00:00:03] Nandini (EM): Right, sprint 36 planning. We have capacity for about twenty-six points this sprint, Farhan is out the second week.
+[00:00:14] Farhan (Dev): Two weeks actually, the 14th through the 25th.
+[00:00:19] Nandini (EM): Two weeks, noted. So call it twenty-two points. Let's start with the carry-over.
+[00:00:27] Ishita (Dev): The SSO beta is still open. SAML works, OIDC works against Google now, but Ping is untested.
+[00:00:38] Nandini (EM): Do we have the Ping tenant yet?
+[00:00:41] Ishita (Dev): No. It's been three weeks since we asked.
+[00:00:46] Nandini (EM): I'll escalate the Ping tenant request to their account team this week.
+[00:00:53] Ishita (Dev): If it lands I need two days. If it doesn't, I'd rather ship SAML and OIDC and mark Ping as unsupported for now.
+[00:01:04] Nandini (EM): Let's do that. We ship SAML and OIDC at the end of this sprint, Ping moves to sprint 37.
+[00:01:14] Ishita (Dev): Fine by me.
+[00:01:17] Nandini (EM): Tarun, the export pagination story.
+[00:01:21] Tarun (Dev): Five points. It's straightforward now that the row cap is in. Split the export into files of a hundred thousand rows each and zip them.
+[00:01:34] Rekha (QA): How do we test that? Our staging data set is only forty thousand rows.
+[00:01:42] Tarun (Dev): Good point. I hadn't thought about that.
+[00:01:46] Rekha (QA): I can generate a synthetic data set. Half a day maybe.
+[00:01:52] Nandini (EM): Do it. Rekha, build a synthetic export data set of at least half a million rows before Tarun starts.
+[00:02:02] Rekha (QA): I'll have it by Wednesday.
+[00:02:05] Tarun (Dev): Then I'll start Thursday and it should be done by end of sprint.
+[00:02:12] Nandini (EM): Next. The audit log retention work. This has a hard deadline, December the first, it's contractual.
+[00:02:22] Farhan (Dev): I spiked the cold storage restore last sprint. Glacier restore is about four hours, well inside the twenty-four hour SLA.
+[00:02:34] Nandini (EM): So what's the estimate?
+[00:02:37] Farhan (Dev): Eight points for the write path, five for the restore request flow. Thirteen total.
+[00:02:45] Nandini (EM): That's more than half the sprint.
+[00:02:49] Farhan (Dev): And I'm out for two weeks of it.
+[00:02:53] Nandini (EM): Right. Can we split it?
+[00:02:57] Farhan (Dev): The write path is independent. I can do that this sprint, and the restore flow goes to sprint 37.
+[00:03:06] Nandini (EM): Do the write path. Farhan, you own the audit log write path this sprint, eight points.
+[00:03:14] Farhan (Dev): Understood.
+[00:03:17] Rekha (QA): I want to raise the flaky test situation again.
+[00:03:22] Nandini (EM): Go on.
+[00:03:24] Rekha (QA): We're at six flaky tests. Down from fourteen, so the cleanup sprint worked. But three of them came back.
+[00:03:35] Tarun (Dev): Came back how?
+[00:03:38] Rekha (QA): Same checkout timing issues. The fix treated the symptom.
+[00:03:44] Nandini (EM): Is anyone looking at the root cause?
+[00:03:48] Rekha (QA): Nobody's assigned.
+[00:03:51] Ishita (Dev): I'll take it. I wrote most of that flow originally.
+[00:03:57] Nandini (EM): Thanks Ishita. Three points, root cause on the checkout test timing.
+[00:04:04] Ishita (Dev): I'll report back by the middle of next week either way.
+[00:04:10] Nandini (EM): Anything else for the sprint?
+[00:04:14] Tarun (Dev): The logging library migration is still in the backlog. It's been there two months.
+[00:04:22] Nandini (EM): It's not urgent.
+[00:04:25] Tarun (Dev): It gets worse though. It was a hundred and forty files, it's a hundred and ninety now.
+[00:04:33] Nandini (EM): That's a fair point. But not this sprint, we're already at capacity.
+[00:04:40] Farhan (Dev): Can we at least stop adding new usages? A lint rule would do it.
+[00:04:47] Tarun (Dev): That's twenty minutes of work.
+[00:04:50] Nandini (EM): Then do it. Tarun, add a lint rule blocking new imports of the old logging library.
+[00:04:59] Tarun (Dev): I'll put it in today.
+[00:05:03] Nandini (EM): Good. Let me read back. Ishita ships SAML and OIDC and takes the checkout root cause. Tarun does export pagination and the lint rule. Rekha builds the synthetic data set by Wednesday. Farhan does the audit log write path. I chase the Ping tenant.
+[00:05:25] Ishita (Dev): Correct.
+[00:05:27] Tarun (Dev): Correct.
+[00:05:29] Rekha (QA): Yes.
+[00:05:31] Farhan (Dev): Yes.
+[00:05:34] Nandini (EM): Twenty-four points against twenty-two capacity. Slightly over, but the lint rule is trivial. We're done.

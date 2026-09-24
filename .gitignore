@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Data: keep folder structure, ignore contents
+data/audio/*
+data/transcripts/*
+data/db/*
+!data/**/.gitkeep
+
+# Ground truth IS committed - it is the evaluation baseline
+!data/ground_truth/**
+
+# Environments / tooling
+venv/
+.claude/
+.streamlit/secrets.toml

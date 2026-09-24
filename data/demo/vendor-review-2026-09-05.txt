@@ -1,0 +1,54 @@
+[00:00:02] Sunita (Procurement): Quarterly vendor review. Four contracts up for renewal before December. Let's decide renew, renegotiate, or drop on each.
+[00:00:14] Imran (Finance): Total spend across the four is about three hundred and ten thousand a year.
+[00:00:22] Sunita (Procurement): Start with the observability platform. Renewal is November the fifteenth.
+[00:00:29] Imran (Finance): Ninety-six thousand annually. Up from seventy-two last year.
+[00:00:36] Devika (Eng Manager): That's a thirty-three percent increase for the same product.
+[00:00:42] Imran (Finance): They cite increased data volume. Which is partly true, our ingestion is up about forty percent.
+[00:00:51] Devika (Eng Manager): Most of that is debug logging that nobody reads. We could cut it by half without losing anything.
+[00:01:00] Sunita (Procurement): Would that change the price tier?
+[00:01:04] Devika (Eng Manager): It should drop us a tier, yes.
+[00:01:08] Sunita (Procurement): Then that's worth doing before we negotiate, not after. Devika, audit log ingestion and identify what can be dropped.
+[00:01:19] Devika (Eng Manager): I'll have that within two weeks.
+[00:01:23] Sunita (Procurement): I'll hold the renewal conversation until I have your numbers.
+[00:01:29] Imran (Finance): Are we considering alternatives at all?
+[00:01:34] Devika (Eng Manager): Migration would cost us a quarter of engineering time. It's not worth it for twenty thousand.
+[00:01:43] Sunita (Procurement): Agreed, we renegotiate rather than switch.
+[00:01:48] Sunita (Procurement): Next, the CI provider. Renewal December the first.
+[00:01:54] Devika (Eng Manager): Forty-eight thousand. And honestly it's been unreliable. We had eleven hours of CI outage last quarter.
+[00:02:04] Imran (Finance): Is that in the SLA?
+[00:02:07] Devika (Eng Manager): There is an SLA. We've never claimed against it.
+[00:02:13] Sunita (Procurement): Why not?
+[00:02:16] Devika (Eng Manager): Nobody tracked the downtime formally. We just complained internally.
+[00:02:23] Sunita (Procurement): So we have a contractual right we've never used. Devika, pull the CI outage history and check it against the SLA terms.
+[00:02:34] Devika (Eng Manager): I'll get that from our status page archive. Give me a week.
+[00:02:41] Imran (Finance): If we can claim credits that changes the negotiation considerably.
+[00:02:48] Sunita (Procurement): It does. Third, the design tool licences.
+[00:02:54] Imran (Finance): Twenty-two thousand. Forty seats.
+[00:03:00] Sunita (Procurement): How many are actually used?
+[00:03:04] Imran (Finance): I don't have usage data. The vendor provides it but nobody's requested it.
+[00:03:11] Sunita (Procurement): I'll request the seat utilisation report from them this week.
+[00:03:18] Imran (Finance): My guess is we're paying for at least ten dormant seats.
+[00:03:24] Devika (Eng Manager): Probably more. Two of the designers left in June.
+[00:03:30] Sunita (Procurement): Then we right-size at renewal. That one's straightforward.
+[00:03:37] Sunita (Procurement): Last, the LLM API contract. This is the one I want to spend time on.
+[00:03:44] Imran (Finance): A hundred and forty-four thousand. It's our biggest line and it's grown every month.
+[00:03:52] Devika (Eng Manager): It's usage based, so it grows with the product. That's expected.
+[00:03:59] Imran (Finance): Expected isn't the same as budgeted. We're forty percent over what we forecast in January.
+[00:04:08] Sunita (Procurement): Is there a committed-use discount available?
+[00:04:14] Devika (Eng Manager): There is. Twenty percent off if we commit to an annual volume.
+[00:04:21] Imran (Finance): And if we don't hit the volume?
+[00:04:25] Devika (Eng Manager): We pay for it anyway.
+[00:04:28] Imran (Finance): So it's a bet on growth.
+[00:04:32] Sunita (Procurement): What does the forecast say?
+[00:04:36] Devika (Eng Manager): Honestly, our forecasting on this has been poor. We've missed three quarters running.
+[00:04:44] Sunita (Procurement): Then I'm not signing a volume commitment on a forecast we don't trust.
+[00:04:51] Imran (Finance): That's the right call.
+[00:04:54] Sunita (Procurement): We renew on demand pricing for one more quarter, and revisit once we have three months of accurate forecasting.
+[00:05:05] Devika (Eng Manager): I can improve the forecast. We now log usage per feature, we just don't report on it.
+[00:05:14] Sunita (Procurement): Then build the report. Devika, produce a monthly LLM spend forecast broken down by feature.
+[00:05:23] Devika (Eng Manager): I'll have the first one at the end of the month.
+[00:05:28] Imran (Finance): Should we also look at cheaper models for the lower-value calls?
+[00:05:35] Devika (Eng Manager): We should. Not everything needs the flagship model.
+[00:05:41] Sunita (Procurement): That's an engineering decision, not a procurement one. Raise it with your team.
+[00:05:48] Devika (Eng Manager): I'll bring it to architecture review.
+[00:05:53] Sunita (Procurement): Good. Four contracts, three actions on Devika, one on me. Nothing gets signed until the data comes back.

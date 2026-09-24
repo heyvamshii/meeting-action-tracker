@@ -1,0 +1,54 @@
+[00:00:02] Rohit (Sales Director): Weekly pipeline. We're at sixty-two percent of quarter target with three weeks left. Let's go deal by deal on anything above fifty thousand.
+[00:00:15] Sneha (AE): Halberd is the big one. Two hundred thousand, annual. They've verbally agreed.
+[00:00:23] Rohit (Sales Director): Verbally agreed is not signed. What's outstanding?
+[00:00:28] Sneha (AE): Security review. Their InfoSec team wants our SOC 2 report and a completed vendor questionnaire.
+[00:00:37] Rohit (Sales Director): Do we have SOC 2?
+[00:00:40] Sneha (AE): Type one, yes. They asked for type two.
+[00:00:45] Rohit (Sales Director): We don't have type two until March.
+[00:00:49] Sneha (AE): I know. I've told them. They said it might be acceptable with a remediation plan attached.
+[00:00:57] Rohit (Sales Director): Might is doing a lot of work in that sentence. Who's their decision maker?
+[00:01:04] Sneha (AE): Their CTO, Marcus. But InfoSec can block it.
+[00:01:10] Rohit (Sales Director): I'll call Marcus directly this week and find out whether InfoSec is a blocker or a checkbox.
+[00:01:19] Sneha (AE): That would help. I'll send you the context beforehand.
+[00:01:24] Rohit (Sales Director): Send it today.
+[00:01:27] Sneha (AE): I'll have it to you by end of day.
+[00:01:31] Rohit (Sales Director): And the questionnaire?
+[00:01:34] Sneha (AE): Forty pages. I've done twelve. Most of it needs engineering input.
+[00:01:41] Rohit (Sales Director): That's not your job to guess at. Kavya, can your team take the technical sections?
+[00:01:49] Kavya (Solutions): We can. Send it over and I'll get it back within a week.
+[00:01:56] Sneha (AE): I'll forward the questionnaire to Kavya today.
+[00:02:01] Rohit (Sales Director): Next. Orbital Systems.
+[00:02:05] Deepak (AE): Eighty thousand. They've gone quiet for two weeks.
+[00:02:11] Rohit (Sales Director): Quiet how?
+[00:02:14] Deepak (AE): No replies to three emails. My champion changed roles.
+[00:02:20] Rohit (Sales Director): So you've lost your champion and haven't found a new one.
+[00:02:26] Deepak (AE): That's fair.
+[00:02:29] Rohit (Sales Director): This is the pattern that kills deals. Who else did you meet during the pilot?
+[00:02:36] Deepak (AE): Their platform lead sat in on two calls.
+[00:02:41] Rohit (Sales Director): Start there. Deepak, reach out to the platform lead at Orbital before Friday and find out if the project is still funded.
+[00:02:52] Deepak (AE): I'll do that.
+[00:02:55] Rohit (Sales Director): And if it isn't funded, mark it closed lost and stop forecasting it. A dead deal in the pipeline is worse than no deal.
+[00:03:05] Deepak (AE): Understood.
+[00:03:08] Rohit (Sales Director): Kavya, how's the Meridian pilot going?
+[00:03:13] Kavya (Solutions): Technically well. They've onboarded ninety users. Usage is high.
+[00:03:20] Kavya (Solutions): But they've asked for SCIM provisioning twice now, and we don't have a date.
+[00:03:28] Rohit (Sales Director): That's the third customer asking.
+[00:03:32] Sneha (AE): Fourth. Halberd asked in the security review too.
+[00:03:38] Rohit (Sales Director): Then it's not a feature request any more, it's a blocker. I need to take this to product with numbers.
+[00:03:47] Kavya (Solutions): I'll pull together the SCIM demand summary with deal values attached by Wednesday.
+[00:03:55] Rohit (Sales Director): Perfect, that's what I need. Anything on pricing pushback?
+[00:04:02] Deepak (AE): Two prospects said we're expensive relative to Otter and Fireflies.
+[00:04:09] Sneha (AE): Those aren't really comparable products though.
+[00:04:14] Deepak (AE): Buyers don't always know that.
+[00:04:18] Rohit (Sales Director): Which is a positioning problem, not a pricing problem. Do we have a comparison one-pager?
+[00:04:26] Kavya (Solutions): No.
+[00:04:29] Rohit (Sales Director): We should probably build one at some point.
+[00:04:34] Sneha (AE): I could draft it.
+[00:04:37] Rohit (Sales Director): Not this quarter, you're at capacity with Halberd. Let's park it and revisit in October.
+[00:04:45] Sneha (AE): Fine.
+[00:04:48] Rohit (Sales Director): Last thing. The forecast. Sixty-two percent with three weeks left is not going to close itself.
+[00:04:57] Deepak (AE): If Halberd lands we're at ninety-four.
+[00:05:02] Rohit (Sales Director): If. I want the forecast updated with realistic probabilities, not optimistic ones. Everyone update your deals in the CRM by Tuesday morning.
+[00:05:14] Sneha (AE): Will do.
+[00:05:16] Deepak (AE): Will do.
+[00:05:19] Rohit (Sales Director): Right, that's it. Sneha and I on Halberd, Deepak resurrects Orbital, Kavya on the SCIM case and the questionnaire.

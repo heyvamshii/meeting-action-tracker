@@ -1,0 +1,10 @@
+# Cloud deployment (Streamlit Community Cloud). Transcription and extraction
+# both run on Groq there; faster-whisper and ollama are the offline engines,
+# imported only when TRANSCRIPTION_BACKEND=local or LLM_PROVIDER=ollama.
+streamlit==1.40.2
+pandas==2.2.3
+plotly==5.24.1
+groq==0.13.1
+pydantic==2.10.3
+python-dotenv==1.0.1
+av==18.1.0

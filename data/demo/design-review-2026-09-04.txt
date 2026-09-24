@@ -1,0 +1,53 @@
+[00:00:03] Ritu (Design Lead): Design review for the onboarding flow. Arjun's going to walk us through the third iteration. Push back hard, that's what this is for.
+[00:00:15] Arjun (Designer): So the problem we started with: forty-one percent of new accounts never complete setup. They sign up and vanish.
+[00:00:26] Ritu (Design Lead): Do we know where they drop?
+[00:00:30] Arjun (Designer): Step three. The integrations screen. Sixty percent of the total drop-off happens there.
+[00:00:38] Zoya (Research): That matches the interviews. People said they didn't know which integration they needed yet.
+[00:00:47] Arjun (Designer): Right. So iteration three makes integrations skippable. You can finish setup and connect things later.
+[00:00:57] Naveen (Eng): Technically fine. The app already handles an account with no integrations.
+[00:01:04] Ritu (Design Lead): My worry is we're solving drop-off by removing the step rather than fixing it. Do accounts that skip ever come back and connect?
+[00:01:16] Zoya (Research): We don't know. We've never had a skip path to measure.
+[00:01:22] Ritu (Design Lead): Then we should instrument it from day one.
+[00:01:27] Naveen (Eng): I'll add analytics events for skip and for later connection.
+[00:01:33] Ritu (Design Lead): Good. Naveen, instrument the skip path so we can measure whether skippers return.
+[00:01:41] Naveen (Eng): That's part of the build anyway, I'll make sure it's explicit.
+[00:01:47] Arjun (Designer): Second change is the progress indicator. It was five steps, now it's three.
+[00:01:55] Zoya (Research): You didn't remove two steps though. You merged them.
+[00:02:01] Arjun (Designer): I merged them, yes.
+[00:02:04] Zoya (Research): That's a bit of a trick. The work is the same, the bar just moves faster.
+[00:02:11] Arjun (Designer): It's not a trick, it's chunking. Related fields belong together.
+[00:02:18] Ritu (Design Lead): I'm with Arjun on this one. Profile and company details genuinely are one task.
+[00:02:26] Zoya (Research): I'll accept that, but I'd want to test it rather than assume.
+[00:02:32] Ritu (Design Lead): Fair. Zoya, run a five-user usability test on the merged steps before we commit.
+[00:02:41] Zoya (Research): I can run that next week. Results by the eleventh.
+[00:02:47] Arjun (Designer): Third thing, and this is the one I'm least sure about. The empty state.
+[00:02:54] Arjun (Designer): Right now a new account sees a completely blank dashboard. I've mocked up seeded sample data instead.
+[00:03:04] Naveen (Eng): Fake data in a real account?
+[00:03:08] Arjun (Designer): Clearly labelled as sample, with a dismiss button.
+[00:03:14] Naveen (Eng): I've seen that go badly. People export it and think it's real.
+[00:03:21] Zoya (Research): That's a genuine risk. It's happened at my last company.
+[00:03:27] Ritu (Design Lead): What's the alternative?
+[00:03:31] Arjun (Designer): An illustrated empty state with a single call to action. Safer, less compelling.
+[00:03:39] Ritu (Design Lead): I don't want to decide this on instinct. What does the research say about empty states?
+[00:03:47] Zoya (Research): There isn't a clean answer. It depends heavily on product type.
+[00:03:54] Ritu (Design Lead): Then let's not decide it today. Park it, and Arjun brings both options to the next review with the sample data risk addressed.
+[00:04:05] Arjun (Designer): I'd rather decide now, it blocks the build.
+[00:04:11] Naveen (Eng): It doesn't block me. The empty state is the last thing I'd build.
+[00:04:17] Arjun (Designer): Alright, then I'll take the extra week.
+[00:04:22] Ritu (Design Lead): Accessibility. Has anyone checked this against the standards?
+[00:04:29] Arjun (Designer): The colour contrast passes. I haven't tested keyboard navigation.
+[00:04:36] Naveen (Eng): The current onboarding is not keyboard navigable at all. Step two traps focus.
+[00:04:44] Ritu (Design Lead): That's a bug we're carrying into a redesign. Not acceptable.
+[00:04:50] Naveen (Eng): I'll fix the focus trap as part of this work.
+[00:04:55] Ritu (Design Lead): Please. And Arjun, add keyboard states to the spec so it isn't guessed at during the build.
+[00:05:04] Arjun (Designer): I'll update the spec this week.
+[00:05:08] Ritu (Design Lead): One more. What's the mobile story?
+[00:05:13] Arjun (Designer): I've only designed desktop so far.
+[00:05:17] Zoya (Research): Thirty-one percent of signups are on mobile.
+[00:05:22] Arjun (Designer): Then that's a gap. I'll do mobile layouts.
+[00:05:27] Ritu (Design Lead): When?
+[00:05:29] Arjun (Designer): Alongside the empty state options. So next review.
+[00:05:35] Ritu (Design Lead): Good. To summarise: Zoya tests the merged steps by the eleventh, Naveen instruments the skip path and fixes the focus trap, Arjun brings mobile layouts and both empty state options next review and updates the spec this week. The empty state decision is deliberately deferred.
+[00:05:56] Arjun (Designer): Agreed.
+[00:05:58] Zoya (Research): Agreed.
+[00:06:01] Naveen (Eng): Yep.

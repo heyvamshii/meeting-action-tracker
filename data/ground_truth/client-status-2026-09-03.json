@@ -1,0 +1,56 @@
+{
+  "meeting_id": "client-status-2026-09-03",
+  "meeting_date": "2026-09-03",
+  "title": "Weekly client status - payment gateway",
+  "participants": ["Priya (PM)", "Arun (Dev)", "Mark (Client)", "Sneha (QA)"],
+  "summary": "Payment gateway sandbox integration is complete; production is blocked on client-supplied keys, promised by Friday. Go-live moved from the 10th to the 15th with team agreement. A load test failed at 500 concurrent users and is under investigation. Ownership of PCI compliance sign-off is unresolved and was parked.",
+  "decisions": [
+    {
+      "decision": "Go-live date moved from the 10th to the 15th",
+      "made_by": "Priya (PM)",
+      "agreed_by": ["Arun (Dev)"],
+      "timestamp": "00:04:44"
+    }
+  ],
+  "action_items": [
+    {
+      "task": "Provide production payment gateway keys",
+      "owner": "Mark (Client)",
+      "due_date": "2026-09-04",
+      "due_date_source": "explicit",
+      "status": "open",
+      "timestamp": "00:04:35"
+    },
+    {
+      "task": "Profile DB queries to fix load test failure at 500 concurrent users",
+      "owner": "Arun (Dev)",
+      "due_date": "2026-09-06",
+      "due_date_source": "inferred",
+      "status": "open",
+      "timestamp": "00:05:40"
+    },
+    {
+      "task": "Write regression suite for the payment flow",
+      "owner": "Sneha (QA)",
+      "due_date": "2026-09-12",
+      "due_date_source": "explicit",
+      "status": "open",
+      "timestamp": "00:06:15"
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "Is PCI compliance sign-off required before go-live, and who owns it?",
+      "raised_by": "Sneha (QA)",
+      "status": "parked",
+      "timestamp": "00:05:10"
+    }
+  ],
+  "risks": [
+    {
+      "risk": "Go-live depends on client-supplied production keys with no fallback plan",
+      "severity": "high",
+      "timestamp": "00:04:20"
+    }
+  ]
+}

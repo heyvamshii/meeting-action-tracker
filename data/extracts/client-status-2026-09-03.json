@@ -1,0 +1,68 @@
+{
+  "meeting_id": "client-status-2026-09-03",
+  "meeting_date": "2026-09-03",
+  "title": "Weekly client status",
+  "participants": [
+    "Priya (PM)",
+    "Arun (Dev)",
+    "Mark (Client)",
+    "Sneha (QA)"
+  ],
+  "summary": "The team decided to target the go-live date for the 15th instead of the 10th. Mark will provide the production keys, Arun will profile the DB queries, and Sneha will write the regression suite for the payment flow. The PCI compliance sign\u2011off is required before go-live, and it remains unresolved.",
+  "decisions": [
+    {
+      "timestamp": "00:04:44",
+      "confidence": 0.9,
+      "decision": "Target go-live on the 15th instead of the 10th",
+      "made_by": "Priya",
+      "agreed_by": [
+        "Arun"
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "timestamp": "00:04:35",
+      "confidence": 0.95,
+      "task": "Provide the production keys",
+      "owner": "Mark",
+      "owner_source": "speaker",
+      "due_phrase": "till Friday",
+      "due_date": "2026-09-04",
+      "due_date_source": "explicit",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:05:40",
+      "confidence": 0.95,
+      "task": "Profile the DB queries",
+      "owner": "Arun",
+      "owner_source": "speaker",
+      "due_phrase": "this week",
+      "due_date": "2026-09-06",
+      "due_date_source": "inferred",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:06:15",
+      "confidence": 0.95,
+      "task": "Write the regression suite for the payment flow",
+      "owner": "Sneha",
+      "owner_source": "speaker",
+      "due_phrase": "before the 12th",
+      "due_date": "2026-09-12",
+      "due_date_source": "explicit",
+      "status": "open"
+    }
+  ],
+  "open_questions": [
+    {
+      "timestamp": "00:05:10",
+      "confidence": 0.9,
+      "question": "PCI compliance sign-off before go-live",
+      "raised_by": "Sneha",
+      "status": "parked"
+    }
+  ],
+  "risks": []
+}

@@ -1,0 +1,596 @@
+{
+  "meeting_id": "sprint-review-2026-09-11",
+  "meeting_date": "2026-09-11",
+  "title": "Sprint 34 review",
+  "participants": [
+    "Anand (Director)",
+    "Meera (Lead)",
+    "Vikram (Dev)",
+    "Rhea (Dev)",
+    "Deepa (Dev)",
+    "Karthik (Dev)",
+    "Aditi (QA)",
+    "Suresh (Dev)"
+  ],
+  "summary": "The team decided to implement a five\u2011hundred\u2011thousand\u2011row cap now, add a clear error message, and handle pagination later, with Vikram delivering the cap and Rhea writing the pagination story this week. Affected\u2011account lists will be produced by Deepa and communicated by Meera, while the unsubscribe link will be repointed by Karthik and the OIDC flow tested against Google Workspace and Ping. Metrics gauge patterns and related backlog items were assigned to Deepa and Meura for sprint\u202f35, and the audit\u2011log retention date was set to December\u202f1. Open questions remain about whether affected customers are aware and where other silent failures exist. Risks highlighted include potential resource strain from uncapped exports, silent webhook drops, and increased indexing load from the new fifteen\u2011second schedule.",
+  "decisions": [
+    {
+      "timestamp": "00:03:19",
+      "confidence": 0.95,
+      "decision": "Implement a row cap now and handle pagination later",
+      "made_by": "Anand",
+      "agreed_by": []
+    },
+    {
+      "timestamp": "00:05:45",
+      "confidence": 0.94,
+      "decision": "put the metrics gauge pattern into sprint 35",
+      "made_by": "Meera",
+      "agreed_by": []
+    },
+    {
+      "timestamp": "00:07:04",
+      "confidence": 0.95,
+      "decision": "list of affected accounts to be delivered by Monday and communications out by the end of next week",
+      "made_by": "Anand",
+      "agreed_by": [
+        "Meera"
+      ]
+    },
+    {
+      "timestamp": "00:08:24",
+      "confidence": 0.95,
+      "decision": "fix the unsubscribe link before the deprecation deadline",
+      "made_by": "Anand",
+      "agreed_by": [
+        "Karthik"
+      ]
+    },
+    {
+      "timestamp": "00:09:57",
+      "confidence": 0.96,
+      "decision": "Aditi will handle flaky\u2011test cleanup in sprint 35 and write the fix\u2011or\u2011delete policy",
+      "made_by": "Anand",
+      "agreed_by": [
+        "Aditi"
+      ]
+    },
+    {
+      "timestamp": "00:13:07",
+      "confidence": 0.97,
+      "decision": "Adopt a fifteen\u2011second indexing schedule (reversible, no impact on save path)",
+      "made_by": "Anand",
+      "agreed_by": [
+        "Suresh"
+      ]
+    },
+    {
+      "timestamp": "00:15:59",
+      "confidence": 0.96,
+      "decision": "Ship SAML and OIDC as a beta at the end of sprint\u202f35 to Halberd only; treat SCIM as a separate project with no committed date",
+      "made_by": "Anand",
+      "agreed_by": [
+        "Meera"
+      ]
+    },
+    {
+      "timestamp": "00:18:27",
+      "confidence": 0.96,
+      "decision": "audit log retention hard date is December the first",
+      "made_by": "Anand",
+      "agreed_by": []
+    },
+    {
+      "timestamp": "00:22:00",
+      "confidence": 0.94,
+      "decision": "decision on platform vs product will be made Thursday",
+      "made_by": "Anand",
+      "agreed_by": []
+    },
+    {
+      "timestamp": "00:29:56",
+      "confidence": 0.94,
+      "decision": "Hiring decision will be made on Thursday, based on Meera's write\u2011up",
+      "made_by": "Anand",
+      "agreed_by": []
+    }
+  ],
+  "action_items": [
+    {
+      "timestamp": "00:03:19",
+      "confidence": 0.95,
+      "task": "Add a five hundred thousand row cap with a clear error message before we ship this",
+      "owner": "Vikram",
+      "owner_source": "explicit",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:03:32",
+      "confidence": 0.95,
+      "task": "Have the row\u2011cap implementation in by Wednesday",
+      "owner": "Vikram",
+      "owner_source": "speaker",
+      "due_phrase": "by Wednesday",
+      "due_date": "2026-09-16",
+      "due_date_source": "explicit",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:03:47",
+      "confidence": 0.95,
+      "task": "Write the pagination follow\u2011up story this week",
+      "owner": "Rhea",
+      "owner_source": "speaker",
+      "due_phrase": "this week",
+      "due_date": "2026-09-13",
+      "due_date_source": "inferred",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:05:31",
+      "confidence": 0.96,
+      "task": "build the metrics gauge pattern",
+      "owner": "Deepa",
+      "owner_source": "explicit",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:05:31",
+      "confidence": 0.95,
+      "task": "Build the metrics gauge pattern for dead\u2011letter\u2011queue depth (take three days)",
+      "owner": "Deepa",
+      "owner_source": "explicit",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:05:45",
+      "confidence": 0.95,
+      "task": "Add the webhook metrics gauge work to the sprint 35 backlog after this meeting",
+      "owner": "Meera",
+      "owner_source": "speaker",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:05:45",
+      "confidence": 0.95,
+      "task": "add the pattern to the sprint 35 backlog",
+      "owner": "Meera",
+      "owner_source": "explicit",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:06:45",
+      "confidence": 0.96,
+      "task": "produce the list of affected accounts from the last ninety days",
+      "owner": "Deepa",
+      "owner_source": "explicit",
+      "due_phrase": "by Monday",
+      "due_date": "2026-09-14",
+      "due_date_source": "explicit",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:06:45",
+      "confidence": 0.95,
+      "task": "handle customer communication once the list is ready",
+      "owner": "Meera",
+      "owner_source": "explicit",
+      "due_phrase": "by the end of next week",
+      "due_date": "2026-09-20",
+      "due_date_source": "inferred",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:07:14",
+      "confidence": 0.94,
+      "task": "draft the communication and send it to Anand",
+      "owner": "Meera",
+      "owner_source": "explicit",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:08:33",
+      "confidence": 0.95,
+      "task": "repoint the unsubscribe links to the new preferences page",
+      "owner": "Karthik",
+      "owner_source": "explicit",
+      "due_phrase": "this sprint",
+      "due_date": "2026-09-13",
+      "due_date_source": "inferred",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:10:12",
+      "confidence": 0.96,
+      "task": "write the flaky\u2011test fix\u2011or\u2011delete policy",
+      "owner": "Aditi",
+      "owner_source": "explicit",
+      "due_phrase": "by Friday",
+      "due_date": "2026-09-18",
+      "due_date_source": "explicit",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:10:12",
+      "confidence": 0.95,
+      "task": "start flaky\u2011test cleanup",
+      "owner": "Aditi",
+      "owner_source": "explicit",
+      "due_phrase": "Thursday",
+      "due_date": "2026-09-17",
+      "due_date_source": "explicit",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:13:16",
+      "confidence": 0.96,
+      "task": "Change the schedule and monitor cluster load for a week",
+      "owner": "Suresh",
+      "owner_source": "speaker",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:16:21",
+      "confidence": 0.96,
+      "task": "Tell sales today so they stop promising Q4",
+      "owner": "Meera",
+      "owner_source": "speaker",
+      "due_phrase": "today",
+      "due_date": "2026-09-11",
+      "due_date_source": "explicit",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:16:29",
+      "confidence": 0.95,
+      "task": "get the OIDC flow tested against at least Google Workspace and Ping before we call it beta",
+      "owner": "Karthik",
+      "owner_source": "explicit",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:16:55",
+      "confidence": 0.95,
+      "task": "Ask the partner team for a Ping test tenant",
+      "owner": "Meera",
+      "owner_source": "speaker",
+      "due_phrase": "might take a week",
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:17:29",
+      "confidence": 0.93,
+      "task": "set up calls with customers next week and have the SCIM estimate the week after",
+      "owner": "Meera",
+      "owner_source": "speaker",
+      "due_phrase": "next week",
+      "due_date": "2026-09-20",
+      "due_date_source": "inferred",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:17:45",
+      "confidence": 0.94,
+      "task": "include Rhea on the SCIM calls",
+      "owner": "Meera",
+      "owner_source": "speaker",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:19:39",
+      "confidence": 0.95,
+      "task": "spike cold storage restore path",
+      "owner": "Rhea",
+      "owner_source": "speaker",
+      "due_phrase": "until the end of next sprint",
+      "due_date": "2026-09-25",
+      "due_date_source": "inferred",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:20:17",
+      "confidence": 0.96,
+      "task": "pull the slow query log and provide the top ten by total time",
+      "owner": "Vikram",
+      "owner_source": "speaker",
+      "due_phrase": "Tuesday",
+      "due_date": "2026-09-15",
+      "due_date_source": "explicit",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:22:00",
+      "confidence": 0.96,
+      "task": "Write up the two profiles with the case for each and send it round",
+      "owner": "Meera",
+      "owner_source": "explicit",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:22:15",
+      "confidence": 0.96,
+      "task": "Deliver the two profiles",
+      "owner": "Meera",
+      "owner_source": "speaker",
+      "due_phrase": "by Wednesday morning",
+      "due_date": "2026-09-16",
+      "due_date_source": "explicit",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:23:42",
+      "confidence": 0.94,
+      "task": "Include a zero-document guard for the reindex job in the metrics work",
+      "owner": "Deepa",
+      "owner_source": "speaker",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:24:33",
+      "confidence": 0.95,
+      "task": "Make a list of every background job whose failure is invisible to the user",
+      "owner": "Meera",
+      "owner_source": "explicit",
+      "due_phrase": "by the end of the sprint",
+      "due_date": "2026-09-25",
+      "due_date_source": "inferred",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:25:53",
+      "confidence": 0.95,
+      "task": "Pull the staging seed ticket into sprint 35",
+      "owner": "Meera",
+      "owner_source": "explicit",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:27:22",
+      "confidence": 0.96,
+      "task": "Add the mechanical change PR to the backlog",
+      "owner": "Meera",
+      "owner_source": "speaker",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:27:22",
+      "confidence": 0.94,
+      "task": "Add the logging library migration to the backlog",
+      "owner": "Meera",
+      "owner_source": "speaker",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:27:46",
+      "confidence": 0.96,
+      "task": "Write up the incremental indexing design documentation",
+      "owner": "Suresh",
+      "owner_source": "explicit",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:28:41",
+      "confidence": 0.96,
+      "task": "Build the metrics gauge pattern including the zero-document guard and produce the affected-accounts list",
+      "owner": "Deepa",
+      "owner_source": "explicit",
+      "due_phrase": "by Monday",
+      "due_date": "2026-09-14",
+      "due_date_source": "explicit",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:28:41",
+      "confidence": 0.95,
+      "task": "Draft customer communications off the affected\u2011accounts list",
+      "owner": "Meera",
+      "owner_source": "explicit",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:28:41",
+      "confidence": 0.95,
+      "task": "Review the customer communications before they go out",
+      "owner": "Anand",
+      "owner_source": "speaker",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:29:02",
+      "confidence": 0.96,
+      "task": "Cap exports at five hundred thousand rows",
+      "owner": "Vikram",
+      "owner_source": "explicit",
+      "due_phrase": "by Wednesday",
+      "due_date": "2026-09-16",
+      "due_date_source": "explicit",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:29:02",
+      "confidence": 0.95,
+      "task": "Bring the slow query top ten",
+      "owner": "Vikram",
+      "owner_source": "explicit",
+      "due_phrase": "on Tuesday",
+      "due_date": "2026-09-15",
+      "due_date_source": "explicit",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:29:02",
+      "confidence": 0.95,
+      "task": "Write the pagination follow\u2011up story and spike the cold storage restore",
+      "owner": "Rhea",
+      "owner_source": "explicit",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:29:25",
+      "confidence": 0.95,
+      "task": "Repoint the unsubscribe links and test OIDC against Google",
+      "owner": "Karthik",
+      "owner_source": "explicit",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:29:25",
+      "confidence": 0.95,
+      "task": "Drop the index schedule to fifteen seconds, watch the cluster, and write the design up",
+      "owner": "Suresh",
+      "owner_source": "explicit",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:30:03",
+      "confidence": 0.96,
+      "task": "Send Meera's write\u2011up",
+      "owner": "Meera",
+      "owner_source": "speaker",
+      "due_phrase": "Wednesday morning",
+      "due_date": "2026-09-16",
+      "due_date_source": "explicit",
+      "status": "open"
+    }
+  ],
+  "open_questions": [
+    {
+      "timestamp": "00:06:17",
+      "confidence": 0.93,
+      "question": "Do the affected customers know?",
+      "raised_by": "Anand",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:23:01",
+      "confidence": 0.95,
+      "question": "Is there anywhere else we have silent failure?",
+      "raised_by": "Anand",
+      "status": "open"
+    }
+  ],
+  "risks": [
+    {
+      "timestamp": "00:02:44",
+      "confidence": 0.9,
+      "risk": "Exports could hold a worker for twenty minutes without a row cap, impacting resources",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "00:04:04",
+      "confidence": 0.95,
+      "risk": "Two percent of outbound webhooks are being dropped silently, affecting reliability",
+      "severity": "high"
+    },
+    {
+      "timestamp": "00:07:54",
+      "confidence": 0.94,
+      "risk": "Unsubscribe link will break when the deprecated preferences page is removed",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "00:09:15",
+      "confidence": 0.93,
+      "risk": "Flaky tests cause teams to ignore red builds, reducing test reliability",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "00:12:17",
+      "confidence": 0.94,
+      "risk": "Indexing on write (near\u2011real\u2011time) would add 40\u201180\u202fms latency to every save",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "00:12:58",
+      "confidence": 0.94,
+      "risk": "Switching to a fifteen\u2011second schedule would increase index write volume roughly four\u2011fold, stressing the cluster",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "00:18:45",
+      "confidence": 0.93,
+      "risk": "storage cost of seven years of audit logs (~$40k per year) may be prohibitive",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "00:22:20",
+      "confidence": 0.96,
+      "risk": "silent failure rate of ~2% over ninety days with no alert fired",
+      "severity": "high"
+    },
+    {
+      "timestamp": "00:26:23",
+      "confidence": 0.94,
+      "risk": "Old logging library is end-of-life, no patches, potential security issues",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "00:27:07",
+      "confidence": 0.93,
+      "risk": "The longer we wait, the worse the mechanical change PR gets, risking backlog growth",
+      "severity": "medium"
+    }
+  ]
+}

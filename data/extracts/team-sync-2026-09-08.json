@@ -1,0 +1,42 @@
+{
+  "meeting_id": "team-sync-2026-09-08",
+  "meeting_date": "2026-09-08",
+  "title": "Team sync",
+  "participants": [
+    "Meera (Lead)",
+    "Vikram (Dev)",
+    "Rhea (Dev)"
+  ],
+  "summary": "Vikram will raise a ticket for the staging seed job. The team has not decided whether to split the service. It is also still open whether to hire another product engineer or someone who owns the platform. No other decisions were recorded.",
+  "decisions": [],
+  "action_items": [
+    {
+      "timestamp": "00:05:06",
+      "confidence": 0.95,
+      "task": "raise a ticket for the staging seed job",
+      "owner": "Vikram",
+      "owner_source": "speaker",
+      "due_phrase": null,
+      "due_date": null,
+      "due_date_source": "none",
+      "status": "open"
+    }
+  ],
+  "open_questions": [
+    {
+      "timestamp": "00:01:38",
+      "confidence": 0.9,
+      "question": "whether we split the service at all",
+      "raised_by": "Rhea",
+      "status": "open"
+    },
+    {
+      "timestamp": "00:03:22",
+      "confidence": 0.9,
+      "question": "whether we hire another product engineer or someone who owns the platform",
+      "raised_by": "Meera",
+      "status": "open"
+    }
+  ],
+  "risks": []
+}
